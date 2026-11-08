@@ -1,0 +1,13 @@
+{
+  "name": "novatren-technologies",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend \"npm run dev --workspace=apps/frontend\" \"npm run dev --workspace=apps/backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}

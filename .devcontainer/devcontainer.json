@@ -1,0 +1,29 @@
+{
+  "name": "Novatren Technologies",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "forwardPorts": [3000, 4000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend - Next.js",
+      "visibility": "public",
+      "onAutoForward": "notify"
+    },
+    "4000": {
+      "label": "Backend API - Node.js",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "Prisma.prisma"
+      ]
+    }
+  }
+}
