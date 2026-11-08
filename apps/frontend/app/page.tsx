@@ -9,6 +9,8 @@ import {
   Network,
   Wrench,
 } from "lucide-react";
+import RepairTracker from "@/components/RepairTracker";
+import ProjectEstimator from "@/components/ProjectEstimator";
 
 const services = [
   {
@@ -117,46 +119,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-rule utility-section" id="tracker">
-        <div className="page-shell utility-grid">
-          <div className="utility-icon"><Wrench aria-hidden="true" size={22} /></div>
-          <div>
-            <p className="eyebrow">HARDWARE REPAIR TRACKER</p>
-            <h2>Know where your repair stands.</h2>
-            <p className="utility-copy">
-              Get a clear view of your ticket status, technician updates, and next steps.
-            </p>
-          </div>
-          <Link className="quiet-link utility-link" href="#contact">
-            Track a repair <ArrowRight aria-hidden="true" size={17} />
-          </Link>
-        </div>
-      </section>
+      <RepairTracker />
 
-      <section className="section-rule estimator-section" id="estimator">
-        <div className="page-shell estimator-grid">
-          <div className="estimator-copy">
-            <p className="eyebrow">PROJECT ESTIMATOR</p>
-            <h2>Start with a clearer scope.</h2>
-            <p>
-              Tell us what you&apos;re building. We&apos;ll help shape the scope,
-              identify the right approach, and outline a useful next step.
-            </p>
-            <Link className="action-link" href="#contact">
-              Discuss your project <ArrowRight aria-hidden="true" size={17} />
-            </Link>
-          </div>
-          <div className="estimate-mark" aria-hidden="true">
-            <span className="estimate-line estimate-line-one" />
-            <span className="estimate-line estimate-line-two" />
-            <span className="estimate-node estimate-node-one" />
-            <span className="estimate-node estimate-node-two" />
-            <span className="estimate-node estimate-node-three" />
-            <span className="estimate-center"><Cpu size={34} strokeWidth={1.3} /></span>
-            <span className="estimate-label">IDEA → IMPACT</span>
-          </div>
-        </div>
-      </section>
+      <ProjectEstimator />
 
       <section className="section-rule about-section" id="about">
         <div className="page-shell about-grid">
